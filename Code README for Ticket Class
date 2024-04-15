@@ -1,0 +1,28 @@
+# Ticket Class README
+## Overview
+The `Ticket` class is a Python class designed to handle the creation and management of support tickets for an organization. It automates the tracking of ticket statuses, responses, and overall ticket management operations.
+## Features
+- **Ticket Tracking:** Each ticket is uniquely identified and tracked through an incrementing ticket number starting from 2000.
+- **Automatic Status Management:** Tickets are automatically set to "Open Ticket" upon creation and can be transitioned to "Closed Ticket" or "Reopened" based on the user actions.
+- **Dynamic Response Handling:** Responses to tickets can be added, and special handling for password change requests is included.
+- **Statistics:** Class methods provide statistical data about the number of tickets created, resolved, and currently open.
+## Attributes
+- `ticket_number`: A unique identifier for the ticket.
+- `staff_id`: Identifier for the staff member handling the ticket.
+- `creator_name`: Name of the person who created the ticket.
+- `contact_email`: Contact email address of the ticket creator.
+- `description`: Description of the issue or request.
+- `response`: Admin's response to the ticket.
+- `status`: Current status of the ticket (Open, Closed, Reopened).
+## Methods
+- `__init__(self, staff_id, creator_name, contact_email, description)`: Initializes a new ticket.
+- `submit_ticket(self)`: Placeholder for future implementation to submit a ticket.
+- `respond_to_ticket(self, response)`: Allows responding to a ticket, optionally closes it if the response is complete or the issue is a password change.
+- `resolve_password_change(self)`: Specific method to handle password change requests.
+- `close_ticket(self)`: Marks the ticket as closed and updates the count of open and closed tickets.
+- `reopen_ticket(self)`: Reopens a closed ticket, adjusting the statistical counts.
+- `display_ticket(self)`: Prints the details of the ticket to the console.
+## Class Methods
+- `ticket_stats(cls)`: Returns a string detailing the total number of tickets, the number resolved and those still open.
+## USAGE
+- the class is designed to be used within a larger ticket management system, possibly integrated into a GUI or a web application. It is responsible for creating, managing, and displaying tickets as well as providing statistics.
